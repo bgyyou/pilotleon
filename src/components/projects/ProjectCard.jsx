@@ -61,12 +61,41 @@ function ProjectCard({ project, onClick, isDarkBackground }) {
           fontSize: '15px',
           lineHeight: 1.6,
           color: isDarkBackground ? '#cccccc' : '#333333',
-          marginBottom: '4px',
-          flex: 1
+          marginBottom: '12px'
         }}
       >
         {project.description}
       </p>
+
+      {/* 项目预览图 */}
+      <div
+        style={{
+          width: '100%',
+          height: '200px',
+          borderRadius: '12px',
+          marginBottom: '16px',
+          overflow: 'hidden',
+          border: `1px solid ${isDarkBackground ? 'rgba(255,255,255,0.1)' : '#e5e5e5'}`
+        }}
+      >
+        <img
+          src={`${import.meta.env.BASE_URL}${project.preview.replace(/^\//, '')}`}
+          alt={project.title}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            display: 'block'
+          }}
+          onError={(e) => {
+            e.target.style.display = 'none';
+            e.target.parentElement.style.background = '#f5f5f5';
+            e.target.parentElement.style.display = 'flex';
+            e.target.parentElement.style.alignItems = 'center';
+            e.target.parentElement.style.justifyContent = 'center';
+          }}
+        />
+      </div>
 
       {/* 技术栈标签 */}
       <div style={{ marginBottom: '12px' }}>
@@ -89,31 +118,12 @@ function ProjectCard({ project, onClick, isDarkBackground }) {
         ))}
       </div>
 
-      {/* 项目预览图 */}
-      <div
-        style={{
-          width: '100%',
-          height: '200px',
-          background: '#f5f5f5',
-          borderRadius: '12px',
-          marginBottom: '16px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          border: `1px solid ${isDarkBackground ? 'rgba(255,255,255,0.1)' : '#e5e5e5'}`
-        }}
-      >
-        <p style={{ fontSize: '14px', color: '#999999' }}>
-          项目预览图（待上传）
-        </p>
-      </div>
-
       {/* 查看详情提示 */}
       <div
         style={{
           fontSize: '14px',
           color: isDarkBackground ? '#888888' : '#999999',
-          marginTop: 'auto',
+          marginTop: '0',
           display: 'flex',
           alignItems: 'center',
           gap: '8px'

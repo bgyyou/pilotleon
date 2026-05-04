@@ -5,14 +5,19 @@ export const projects = [
     subtitle: 'AI驱动的新媒体自动化平台',
     description: '整合热点追踪、脚本生成、对标分析和数据洞察的一站式平台。通过AI工具集成和自动化工作流，将内容创作时间从45分钟降至12分钟，周产出从15篇提升到45篇，效率提升300%。技术栈：React + FastAPI + Claude API + Google Ads API + Python。',
     tech: ['React', 'FastAPI', 'Claude API', 'Python', 'Google Ads API', 'OpenClaw'],
-    features: ['热点追踪', '脚本生成', '对标分析', '数据洞察', '自动化工作流'],
+    features: ['热点搜索', '脚本生成', '视频分析', '数据分析'],
     achievements: [
       '内容创作时间减少70%',
       '效率提升300%',
       '支持多角色一人执行'
     ],
     preview: '/images/projects/mediapilot-preview.jpg',
-    detail: '/images/projects/mediapilot-detail.jpg',
+    screenshots: [
+      { src: '/images/projects/mediapilot-01.jpg', caption: '热点搜索' },
+      { src: '/images/projects/mediapilot-02.jpg', caption: '脚本生成' },
+      { src: '/images/projects/mediapilot-03.jpg', caption: '视频分析' },
+      { src: '/images/projects/mediapilot-04.jpg', caption: '数据分析' }
+    ],
     link: ''
   },
   {
@@ -28,7 +33,10 @@ export const projects = [
       '渐进式重构'
     ],
     preview: '/images/projects/insurancehub-preview.jpg',
-    detail: '/images/projects/insurancehub-detail.jpg',
+    screenshots: [
+      { src: '/images/projects/insurancehub-01.jpg', caption: '社区动态' },
+      { src: '/images/projects/insurancehub-02.jpg', caption: '实时通讯' }
+    ],
     link: ''
   }
 ];

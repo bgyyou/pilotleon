@@ -13,8 +13,8 @@ function ParticleBall({ isVisible, onRipple }) {
 
   const rotationRef = useRef({ x: 0, y: 0 });
   const dragStartRef = useRef({ x: 0, y: 0 });
-  const rotationVelocityRef = useRef({ x: 0.002, y: 0.003 });
-  const autoRotateSpeed = 1.5;
+  const rotationVelocityRef = useRef({ x: 0.004, y: 0.005 });
+  const autoRotateSpeed = 2.0;
   const dampingFactor = 0.05;
 
   useEffect(() => {
@@ -32,7 +32,7 @@ function ParticleBall({ isVisible, onRipple }) {
   useEffect(() => {
     if (!isVisible || !canvasRef.current) return;
 
-    const particleCount = 600;
+    const particleCount = 900;
     const positions = [];
     const colors = [];
     const radii = [];
@@ -40,7 +40,7 @@ function ParticleBall({ isVisible, onRipple }) {
     for (let i = 0; i < particleCount; i++) {
       const theta = Math.random() * Math.PI * 2;
       const phi = Math.acos(2 * Math.random() - 1);
-      const r = 80 + Math.random() * 20;
+      const r = 1320 + Math.random() * 330;
 
       positions.push(
         r * Math.sin(phi) * Math.cos(theta),
@@ -48,7 +48,7 @@ function ParticleBall({ isVisible, onRipple }) {
         r * Math.cos(phi)
       );
 
-      const brightness = 0.7 + Math.random() * 0.3;
+      const brightness = 0.8 + Math.random() * 0.2;
       colors.push(brightness, brightness, brightness);
 
       radii.push((2 + Math.random() * 2) * 0.9);
@@ -70,7 +70,7 @@ function ParticleBall({ isVisible, onRipple }) {
 
       breatheTime += 0.016;
 
-      const breathe = 1 + Math.sin(breatheTime) * 0.4;
+      const breathe = 1 + Math.sin(breatheTime) * 0.55;
 
       if (isHovered) {
         targetScale = 1.1;
@@ -92,8 +92,8 @@ function ParticleBall({ isVisible, onRipple }) {
           Math.abs(rotationVelocityRef.current.x) < 0.001 &&
           Math.abs(rotationVelocityRef.current.y) < 0.001
         ) {
-          rotationVelocityRef.current.x = 0.002 * autoRotateSpeed;
-          rotationVelocityRef.current.y = 0.003 * autoRotateSpeed;
+          rotationVelocityRef.current.x = 0.004 * autoRotateSpeed;
+          rotationVelocityRef.current.y = 0.005 * autoRotateSpeed;
         }
       } else {
         rotationVelocityRef.current.x *= 1 - dampingFactor;
@@ -198,8 +198,8 @@ function ParticleBall({ isVisible, onRipple }) {
   return (
     <canvas
       ref={canvasRef}
-      width={300 * scale}
-      height={300 * scale}
+      width={420 * scale}
+      height={420 * scale}
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}

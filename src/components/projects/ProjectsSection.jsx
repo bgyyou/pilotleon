@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { motion, AnimatePresence } from 'framer-motion';
 import { projects } from '../../data/projects.js';
 import ProjectCard from './ProjectCard.jsx';
+import ProjectDemo from './ProjectDemo.jsx';
 
 function ProjectsSection({ activeProject: externalActiveProject, onBack, onProjectSelect, isDarkBackground }) {
   const [internalActiveProject, setInternalActiveProject] = useState(null);
@@ -161,27 +162,18 @@ function ProjectsSection({ activeProject: externalActiveProject, onBack, onProje
               </div>
             )}
 
-            {/* 项目试用Demo区域 */}
-            <div style={{
-              border: `2px solid ${isDarkBackground ? '#ffffff' : '#000000'}`,
-              borderRadius: '16px',
-              padding: '32px',
-              minHeight: '400px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              background: isDarkBackground ? 'rgba(255,255,255,0.02)' : '#f9f9f9',
-              marginBottom: '48px'
-            }}>
-              <div style={{ textAlign: 'center' }}>
-                <h3 style={{ fontSize: '24px', fontWeight: 600, marginBottom: '16px', color: isDarkBackground ? '#ffffff' : '#000000' }}>
-                  项目试用 Demo
+            {/* 功能截图轮播 */}
+            {project.screenshots && project.screenshots.length > 0 && (
+              <div style={{ marginBottom: '48px' }}>
+                <h3 style={{ fontSize: '18px', fontWeight: 600, marginBottom: '16px', color: isDarkBackground ? '#ffffff' : '#000000' }}>
+                  功能展示
                 </h3>
-                <p style={{ fontSize: '16px', color: isDarkBackground ? '#aaaaaa' : '#666666' }}>
-                  Demo区域待开发
-                </p>
+                <ProjectDemo
+                  screenshots={project.screenshots}
+                  isDarkBackground={isDarkBackground}
+                />
               </div>
-            </div>
+            )}
           </motion.div>
         ) : null}
       </AnimatePresence>

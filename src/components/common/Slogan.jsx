@@ -61,7 +61,7 @@ function Slogan({ isVisible }) {
     <div
       style={{
         position: 'absolute',
-        top: `calc(50% - ${250 * scale}px)`,
+        top: `calc(50% - ${280 * scale}px)`,
         left: '50%',
         transform: 'translateX(-50%)',
         textAlign: 'center',
@@ -73,9 +73,9 @@ function Slogan({ isVisible }) {
     >
       <div
         style={{
-          fontSize: `${18 * scale}px`,
-          fontWeight: 500,
-          lineHeight: 1.6,
+          fontSize: `${54 * scale}px`,
+          fontWeight: 700,
+          lineHeight: 1.5,
           marginBottom: `${8 * scale}px`
         }}
       >
@@ -88,9 +88,9 @@ function Slogan({ isVisible }) {
       {showEn && (
         <div
           style={{
-            fontSize: `${14 * scale}px`,
+            fontSize: `${36 * scale}px`,
             fontWeight: 400,
-            opacity: 0.8,
+            opacity: 0.9,
             lineHeight: 1.4
           }}
         >

@@ -1,0 +1,125 @@
+.codeblock {
+  background: #0d0d10;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: var(--space-6);
+  box-shadow: var(--shadow-md);
+}
+
+.codeblock__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 255, 255, 0.02);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.codeblock__file {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-secondary);
+}
+
+.codeblock__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.codeblock__lang {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-tertiary);
+  padding: 2px 8px;
+  background: var(--bg-elevated-2);
+  border-radius: var(--radius-full);
+}
+
+.codeblock__copy {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  background: transparent;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-out-expo);
+}
+
+.codeblock__copy:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.codeblock__body {
+  overflow-x: auto;
+  padding: var(--space-4) 0;
+}
+
+.codeblock__pre {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin: 0;
+  min-width: max-content;
+}
+
+.codeblock__line {
+  display: flex;
+  padding: 0 var(--space-4);
+  white-space: pre;
+}
+
+.codeblock__line:hover {
+  background: rgba(0, 255, 209, 0.025);
+}
+
+.codeblock__lineno {
+  display: inline-block;
+  width: 36px;
+  flex-shrink: 0;
+  color: var(--text-muted);
+  text-align: right;
+  padding-right: var(--space-3);
+  user-select: none;
+  font-feature-settings: 'tnum';
+}
+
+.codeblock__code {
+  flex: 1;
+}
+
+/* === Token colors === */
+:global(.tok-keyword) {
+  color: #FF6B9D;
+  font-weight: 500;
+}
+:global(.tok-string) {
+  color: #B388FF;
+}
+:global(.tok-number) {
+  color: #FFB648;
+}
+:global(.tok-comment) {
+  color: var(--text-muted);
+  font-style: italic;
+}
+:global(.tok-decorator) {
+  color: #4FC3F7;
+  font-weight: 500;
+}
+:global(.tok-fn) {
+  color: var(--accent);
+}

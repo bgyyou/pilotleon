@@ -1,0 +1,234 @@
+.workgrid {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.workgrid__head {
+  max-width: 720px;
+  margin: 0 auto var(--space-16);
+  text-align: center;
+}
+
+.workgrid__headline {
+  font-size: var(--fs-4xl);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: var(--space-4) 0;
+  color: var(--text-primary);
+}
+
+.workgrid__headline :global(accent),
+.workgrid__headline .accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+:lang(zh) .workgrid__headline .accent {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.workgrid__lead {
+  font-size: var(--fs-base);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+:lang(zh) .workgrid__lead {
+  font-family: var(--font-cn);
+  line-height: 1.7;
+}
+
+.workgrid__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+/* === Card === */
+.workcard {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: transform var(--duration-base) var(--ease-out-expo),
+              border-color var(--duration-base) var(--ease-out-expo),
+              box-shadow var(--duration-base) var(--ease-out-expo);
+  position: relative;
+}
+
+.workcard:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-medium);
+  box-shadow: var(--shadow-lg);
+}
+
+.workcard__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+}
+
+.workcard__cover {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--bg-elevated-2);
+}
+
+.workcard__gradient {
+  position: absolute;
+  inset: 0;
+  opacity: 0.9;
+  transition: transform 0.8s var(--ease-out-expo), opacity 0.4s;
+}
+
+.workcard:hover .workcard__gradient {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.workcard__cover-name {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-5);
+  font-family: var(--font-display);
+  font-size: var(--fs-xl);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  z-index: 1;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
+}
+
+.workcard__cover-tags {
+  position: absolute;
+  bottom: var(--space-4);
+  left: var(--space-5);
+  display: flex;
+  gap: 6px;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+.workcard__cover-tag {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(8px);
+  color: rgba(255, 255, 255, 0.92);
+  border-radius: var(--radius-full);
+}
+
+.workcard__body {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+}
+
+.workcard__meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+  margin-bottom: var(--space-3);
+}
+
+.workcard__dot {
+  color: var(--text-muted);
+}
+
+.workcard__title {
+  font-size: var(--fs-xl);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: var(--space-2);
+}
+
+:lang(zh) .workcard__title {
+  font-family: var(--font-cn);
+  font-size: var(--fs-lg);
+  font-weight: 500;
+}
+
+.workcard__tagline {
+  font-size: var(--fs-sm);
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-5);
+  min-height: 44px;
+}
+
+:lang(zh) .workcard__tagline {
+  font-family: var(--font-cn);
+  line-height: 1.7;
+}
+
+.workcard__metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: var(--space-4);
+}
+
+.workcard__metric {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.workcard__metric-value {
+  font-family: var(--font-display);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+
+.workcard__metric-label {
+  font-size: 10px;
+  color: var(--text-tertiary);
+  line-height: 1.2;
+}
+
+:lang(zh) .workcard__metric-label {
+  font-family: var(--font-cn);
+}
+
+.workcard__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-sm);
+  color: var(--accent);
+  font-weight: 500;
+  transition: gap var(--duration-base) var(--ease-out-expo);
+}
+
+.workcard:hover .workcard__cta {
+  gap: 10px;
+}
+
+@media (max-width: 1000px) {
+  .workgrid__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .workgrid__grid {
+    grid-template-columns: 1fr;
+  }
+}

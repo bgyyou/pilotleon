@@ -30,3 +30,9 @@ dist-ssr
 .env.*.local
 
 .vercel
+
+# Claude Code local
+.claude/
+
+# Playwright scratch
+pw_*.json

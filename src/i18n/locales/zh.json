@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "work": "作品",
+    "about": "关于",
+    "stack": "工具箱",
+    "contact": "联系"
+  },
+  "hero": {
+    "eyebrow": "AI 产品工程师 · 深圳",
+    "title_line1": "在 AI 时代，",
+    "title_line2": "做出能上线的",
+    "title_line3": "AI 产品。",
+    "subtitle": "我是 Leon。独立产品人，专注于多 Agent 系统与 AI 工具的工程化落地。三年时间，从营销人到 AI 产品工程师 — 用三个产品走完一遍 AI 时代产品从 0 到 1 的全链路。",
+    "cta_primary": "查看作品",
+    "cta_secondary": "联系我",
+    "status": "目前正在看深圳 AI 产品 / FDE 机会"
+  },
+  "about": {
+    "eyebrow": "关于我",
+    "headline": "从香港到深圳，<accent>用三个产品</accent>走通 AI 时代独立 PM 的全链路。",
+    "body_1": "2022 年在爱丁堡读完语言学，误打误撞进了一家营销公司做跨境社媒。后来意识到：AI 工具已经把\"做出产品\"的门槛拉到地板，<strong>「被看见」和「被完成」才是新瓶颈</strong>。",
+    "body_2": "于是我开始自己做产品。先做 WDA — 解决企业主 AI 焦虑，看清 7 天 MVP 路径；再做 OPC — 用多 Agent 真的把 MVP 跑出来；最后做 MediaPilot — 解决产品做出来没声音的问题。",
+    "body_3": "三部曲完成之后，剩下三个项目都是\"我手痒想做的\" — Lumora 的产品宪法、JobHunter 的 RAG 闭环、Poker GTO 的工程规范。它们不商业化，但证明我能把工程纪律带到任何产品里。",
+    "stats": {
+      "products": { "value": "6", "label": "可演示产品" },
+      "agents": { "value": "9", "label": "Agent 协同管线" },
+      "shipped": { "value": "2", "label": "已上线商业产品" },
+      "tests": { "value": "193", "label": "工程测试覆盖" }
+    },
+    "experience_eyebrow": "经历",
+    "experience_note": "从社媒到 AI 产品的转型路径"
+  },
+  "trilogy": {
+    "eyebrow": "三部曲 · AI 时代独立产品心法",
+    "headline": "<accent>焦虑</accent> → <accent>执行</accent> → <accent>放大</accent>",
+    "lead": "三个产品，对应 AI 时代产品经理最该想清楚的三件事：方向、交付、传播。",
+    "acts": {
+      "act1": {
+        "index": "01",
+        "phase": "看清方向",
+        "title": "企业 AI 焦虑的解药",
+        "name": "WDA · Workflow Discovery Agent",
+        "summary": "帮企业主把\"我该怎么用 AI\"的焦虑，拆成 7 天可落地的 MVP 计划。",
+        "outputs": [
+          "全网证据链三层评分（规则 → Haiku → Sonnet）",
+          "工作流 × 痛点 × Agent 介入点 × ROI 完整报告",
+          "真 Agent 循环，9 步强制状态机"
+        ]
+      },
+      "act2": {
+        "index": "02",
+        "phase": "跑出 MVP",
+        "title": "把 7 天 MVP 计划做出来",
+        "name": "OPC · One Prompt Creates",
+        "summary": "用 6 个 Agent 协作（PM/Frontend/Backend/Test/Ops/CEO），把 WDA 给的 MVP 计划跑成真代码、真部署。",
+        "outputs": [
+          "FastAPI + Next.js 16 + Celery 企业级架构",
+          "PRD → 代码 → 测试 → 部署配置 一条龙",
+          "闭环验证 + 两级 fallback"
+        ]
+      },
+      "act3": {
+        "index": "03",
+        "phase": "被看见",
+        "title": "产品做完了，怎么被看见？",
+        "name": "MediaPilot",
+        "summary": "当 AI 让\"做出来\"变得简单，营销自己就成了新护城河。MediaPilot 把新媒体全链路缩到几分钟。",
+        "outputs": [
+          "全网五端热点聚合 + AI 总结",
+          "三平台 × 三风格 口播 / 拍摄脚本生成",
+          "Whisper 本地转写 + 视频分析"
+        ]
+      }
+    },
+    "view_detail": "查看产品详情"
+  },
+  "work": {
+    "eyebrow": "其他作品",
+    "headline": "三部曲之外，<accent>手痒做的</accent>三个项目。",
+    "lead": "它们不商业化，但每一个都解决了一个真实问题。",
+    "view_detail": "查看 →",
+    "view_code": "代码 →"
+  },
+  "stack": {
+    "eyebrow": "工具箱",
+    "headline": "我的<accent>日常工作栈</accent>。",
+    "lead": "从模型到部署，从 Agent 到前端 — 我能写完整套的代码。",
+    "groups": {
+      "ai": "AI / Agent",
+      "frontend": "前端",
+      "backend": "后端",
+      "infra": "工程基建",
+      "tools": "效率工具"
+    }
+  },
+  "contact": {
+    "eyebrow": "联系",
+    "headline": "在找<accent>深圳 AI 产品 / FDE</accent>的机会。",
+    "lead": "如果你看到这里，欢迎聊聊。我可以一周内到深圳，远程或现场都可。",
+    "email": "邮箱",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "wechat": "微信"
+  },
+  "footer": {
+    "copyright": "© 2026 Leon Zheng. Built with Claude.",
+    "last_updated": "最后更新"
+  },
+  "project_detail": {
+    "back": "← 返回作品",
+    "problem": "问题",
+    "solution": "方案",
+    "architecture": "架构",
+    "code_deep_dive": "关键代码",
+    "screenshots": "截图",
+    "links": "链接",
+    "view_github": "GitHub →",
+    "view_docs": "文档 →",
+    "view_demo": "演示 →",
+    "metrics_title": "关键指标",
+    "tech_title": "技术栈",
+    "status_title": "状态"
+  }
+}

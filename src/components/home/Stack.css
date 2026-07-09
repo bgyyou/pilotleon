@@ -1,0 +1,133 @@
+.stack {
+  background: var(--bg-base);
+  position: relative;
+}
+
+.stack__head {
+  max-width: 720px;
+  margin: 0 auto var(--space-16);
+  text-align: center;
+}
+
+.stack__headline {
+  font-size: var(--fs-4xl);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: var(--space-4) 0;
+  color: var(--text-primary);
+}
+
+.stack__headline :global(accent),
+.stack__headline .accent {
+  color: var(--accent);
+  font-style: italic;
+}
+
+:lang(zh) .stack__headline .accent {
+  font-style: normal;
+  font-weight: 700;
+}
+
+.stack__lead {
+  font-size: var(--fs-base);
+  color: var(--text-tertiary);
+  margin: 0;
+}
+
+:lang(zh) .stack__lead {
+  font-family: var(--font-cn);
+  line-height: 1.7;
+}
+
+.stack__groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--space-8);
+}
+
+.stack__group {
+  padding: var(--space-6);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  transition: border-color var(--duration-base) var(--ease-out-expo);
+}
+
+.stack__group:hover {
+  border-color: var(--border-medium);
+}
+
+.stack__group-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: var(--space-5);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.stack__group-name {
+  font-family: var(--font-display);
+  font-size: var(--fs-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+:lang(zh) .stack__group-name {
+  font-family: var(--font-cn);
+}
+
+.stack__group-count {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+.stack__items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stack__item {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 32px;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.stack__item-name {
+  font-size: var(--fs-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+}
+
+:lang(zh) .stack__item-name {
+  font-family: var(--font-mono);
+}
+
+.stack__item-bar {
+  height: 4px;
+  background: var(--bg-elevated-2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.stack__item-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent) 0%, #4FC3F7 100%);
+  border-radius: 2px;
+  box-shadow: 0 0 8px var(--accent-glow);
+}
+
+.stack__item-level {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  text-align: right;
+  font-feature-settings: 'tnum';
+}

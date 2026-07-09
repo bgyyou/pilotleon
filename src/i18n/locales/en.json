@@ -1,0 +1,124 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "stack": "Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "AI Product Engineer · Shenzhen",
+    "title_line1": "In the age of AI,",
+    "title_line2": "I ship products",
+    "title_line3": "that actually launch.",
+    "subtitle": "I'm Leon. An independent product engineer focused on multi-agent systems and the engineering of AI tools. In 3 years, I went from marketer to AI product engineer — and built three products that walk the full 0-to-1 path of the AI era.",
+    "cta_primary": "View Work",
+    "cta_secondary": "Get in Touch",
+    "status": "Currently exploring AI PM / FDE roles in Shenzhen"
+  },
+  "about": {
+    "eyebrow": "About",
+    "headline": "From Hong Kong to Shenzhen — <accent>three products</accent> that walk the full AI product loop.",
+    "body_1": "I graduated from Edinburgh with a linguistics degree in 2022, then fell into cross-border social media. Along the way, I realized something: AI has dropped the floor on <em>making</em> a product to ground level. <strong>Getting seen — and getting finished</strong> — is the new bottleneck.</",
+    "body_2": "So I started building. First WDA — to cure \"how do I use AI\" anxiety with a 7-day MVP plan. Then OPC — multi-agents that actually run that plan into real code, real deploy. Finally MediaPilot — to make sure the product gets seen.",
+    "body_3": "After the trilogy, the other three projects are the ones I built because I was curious. Lumora's product constitution. JobHunter's RAG loop. Poker GTO's engineering discipline. They aren't commercialized, but they prove I bring engineering rigor to whatever I touch.",
+    "stats": {
+      "products": { "value": "6", "label": "Demoable products" },
+      "agents": { "value": "9", "label": "Agent pipeline steps" },
+      "shipped": { "value": "2", "label": "Live commercial products" },
+      "tests": { "value": "193", "label": "Engineering test cases" }
+    },
+    "experience_eyebrow": "Experience",
+    "experience_note": "The path from social media to AI product"
+  },
+  "trilogy": {
+    "eyebrow": "The Trilogy · An indie PM's playbook for the AI era",
+    "headline": "<accent>Anxiety</accent> → <accent>Execution</accent> → <accent>Amplification</accent>",
+    "lead": "Three products. Three things every AI-era PM must figure out: direction, delivery, distribution.",
+    "acts": {
+      "act1": {
+        "index": "01",
+        "phase": "Find direction",
+        "title": "An antidote to enterprise AI anxiety",
+        "name": "WDA · Workflow Discovery Agent",
+        "summary": "Turn \"how should I use AI?\" into a 7-day MVP plan that actually ships.",
+        "outputs": [
+          "3-layer evidence scoring (rules → Haiku → Sonnet)",
+          "Workflow × pain points × agent fit × ROI — full report",
+          "True agent loop, 9-step forced state machine"
+        ]
+      },
+      "act2": {
+        "index": "02",
+        "phase": "Ship the MVP",
+        "title": "From MVP plan to running product",
+        "name": "OPC · One Prompt Creates",
+        "summary": "Six agents (PM / Frontend / Backend / Test / Ops / CEO) collaborate to turn WDA's MVP plan into real code, real deploy.",
+        "outputs": [
+          "FastAPI + Next.js 16 + Celery, enterprise-grade",
+          "PRD → code → tests → deploy, end to end",
+          "Closed-loop validation + two-level fallback"
+        ]
+      },
+      "act3": {
+        "index": "03",
+        "phase": "Get seen",
+        "title": "OK, it's built. Now what?",
+        "name": "MediaPilot",
+        "summary": "When AI makes building trivial, distribution is the new moat. MediaPilot compresses the new-media pipeline to minutes.",
+        "outputs": [
+          "5-source trending aggregation + AI summary",
+          "3 platforms × 3 styles copy & shooting script",
+          "Local Whisper transcription + video analysis"
+        ]
+      }
+    },
+    "view_detail": "View case study →"
+  },
+  "work": {
+    "eyebrow": "More work",
+    "headline": "Beyond the trilogy, <accent>three more</accent> I built out of curiosity.",
+    "lead": "Not commercialized — but each solves a real problem.",
+    "view_detail": "View →",
+    "view_code": "Code →"
+  },
+  "stack": {
+    "eyebrow": "Stack",
+    "headline": "My <accent>day-to-day stack</accent>.",
+    "lead": "From model to deploy, agent to frontend — I write the whole stack.",
+    "groups": {
+      "ai": "AI / Agent",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "infra": "Infra",
+      "tools": "Productivity"
+    }
+  },
+  "contact": {
+    "eyebrow": "Contact",
+    "headline": "Looking for <accent>Shenzhen AI PM / FDE</accent> roles.",
+    "lead": "If you made it this far, let's chat. I can be in Shenzhen within a week — remote or on-site.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn",
+    "wechat": "WeChat"
+  },
+  "footer": {
+    "copyright": "© 2026 Leon Zheng. Built with Claude.",
+    "last_updated": "Last updated"
+  },
+  "project_detail": {
+    "back": "← Back to work",
+    "problem": "Problem",
+    "solution": "Solution",
+    "architecture": "Architecture",
+    "code_deep_dive": "Code deep dive",
+    "screenshots": "Screenshots",
+    "links": "Links",
+    "view_github": "GitHub →",
+    "view_docs": "Docs →",
+    "view_demo": "Demo →",
+    "metrics_title": "Key metrics",
+    "tech_title": "Tech",
+    "status_title": "Status"
+  }
+}

@@ -36,3 +36,6 @@ dist-ssr
 
 # Playwright scratch
 pw_*.json
+
+# Large 3D models (use LFS or external hosting if needed)
+public/models/*.glb

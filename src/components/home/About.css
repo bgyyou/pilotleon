@@ -155,9 +155,9 @@
 }
 
 .about__headline {
-  font-size: var(--fs-5xl);
+  font-size: var(--fs-4xl);
   font-weight: 600;
-  line-height: 1.05;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   margin-top: var(--space-5);
   color: var(--text-primary);

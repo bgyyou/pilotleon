@@ -4,60 +4,6 @@
  */
 export const experience = [
   {
-    period: { zh: '2026.05 — 至今', en: 'May 2026 — Present' },
-    role: { zh: 'AI 产品经理 (独立)', en: 'AI Product Manager (Independent)' },
-    company: { zh: 'WDA · Workflow Thief Arena', en: 'WDA · Workflow Thief Arena' },
-    location: { zh: '深圳', en: 'Shenzhen' },
-    bullets: {
-      zh: [
-        '产品定义:输入工作流描述,Agent 自动输出原始流程图、AI 优化方案、7 天 MVP 落地计划与 ROI 分析(含真实证据链)',
-        'Agent 架构升级:从硬编码流水线升级为基于 LLM 自主选择工具调用的决策架构',
-        '商业化落地:三层评分机制(规则 → 轻量模型 → 大模型)保障证据链质量,完成可部署 SaaS 闭环',
-      ],
-      en: [
-        'Product definition: input a workflow description, Agent outputs raw flow diagram, AI-optimized plan, 7-day MVP roadmap, and ROI analysis with real evidence chain',
-        'Agent architecture upgrade: from hard-coded pipeline to LLM-driven tool selection / decision-style architecture',
-        'Commercialized: 3-tier scoring (rules → Haiku → Sonnet) ensures evidence quality, closing the deployable SaaS loop',
-      ],
-    },
-  },
-  {
-    period: { zh: '2026.03 — 至今', en: 'Mar 2026 — Present' },
-    role: { zh: 'AI 产品经理 (独立)', en: 'AI Product Manager (Independent)' },
-    company: { zh: 'JobHunter · 企业级智能求职 Agent', en: 'JobHunter · Enterprise AI Recruiting Agent' },
-    location: { zh: '深圳', en: 'Shenzhen' },
-    bullets: {
-      zh: [
-        '产品设计:搭建多轮对话 Agent 交互流程,基于 PostgreSQL + pgvector 向量知识库沉淀 500+ 条 JD 数据,实现简历定向匹配',
-        '多智能体编排:设计「对话管理 - 任务拆解 - RAG 检索 - 定向优化 - 结果校验」五段式 Agent 协作链路',
-        '业务成果:上线企业付费使用,简历产出效率提升 70%,NPS +65',
-      ],
-      en: [
-        'Product design: multi-turn dialog Agent on PostgreSQL + pgvector (500+ JD entries) for resume-JD targeted matching',
-        'Multi-agent orchestration: 5-stage chain — dialog / task / RAG retrieval / targeted optimization / result validation',
-        'Business outcome: live paid enterprise users, 70% faster resume output, NPS +65',
-      ],
-    },
-  },
-  {
-    period: { zh: '2026.01 — 至今', en: 'Jan 2026 — Present' },
-    role: { zh: 'AI 产品经理 (独立)', en: 'AI Product Manager (Independent)' },
-    company: { zh: 'OPC · One Prompt Creates', en: 'OPC · One Prompt Creates' },
-    location: { zh: '深圳', en: 'Shenzhen' },
-    bullets: {
-      zh: [
-        '产品定义:用户输入一句话想法,多 Agent 系统(CEO/PM/FE/BE/Test/Ops)自动输出 PRD、前后端代码、Schema 与部署配置',
-        '架构设计:六角色 Agent 协作链路,支持多租户隔离与异步生成',
-        '业务成果:核心流程跑通,支持本地一键部署与商业化交付',
-      ],
-      en: [
-        'Product definition: one prompt → 6-agent system (CEO/PM/FE/BE/Test/Ops) outputs PRD, code, schema, deploy config',
-        'Architecture: 6-role Agent collaboration, multi-tenant isolation, async generation',
-        'Business outcome: core pipeline working, one-click local deploy, commercial delivery ready',
-      ],
-    },
-  },
-  {
     period: { zh: '2025.12 — 2026.05', en: 'Dec 2025 — May 2026' },
     role: { zh: 'AI 产品负责人', en: 'AI Product Lead' },
     company: { zh: 'Fans Media', en: 'Fans Media' },

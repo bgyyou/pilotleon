@@ -40,10 +40,22 @@ export default function WorkGrid() {
             >
               <Link to={`/work/${p.id}`} className="workcard__link">
                 <div className="workcard__cover">
+                  {/* Fallback gradient (always underneath) */}
                   <div
                     className="workcard__gradient"
                     style={{ background: p.coverGradient }}
                   />
+                  {/* Real cover image (gallery[0]) — sits on top of gradient */}
+                  {p.gallery?.[0]?.image && (
+                    <img
+                      className="workcard__cover-img"
+                      src={p.gallery[0].image}
+                      alt=""
+                      loading="lazy"
+                    />
+                  )}
+                  {/* Dark scrim for text readability */}
+                  <div className="workcard__cover-scrim" />
                   <div className="workcard__cover-name">{p.id}</div>
                   <div className="workcard__cover-tags">
                     {p.tags.slice(0, 3).map((tag) => (

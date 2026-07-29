@@ -67,6 +67,7 @@
   /* === Layout === */
   --container-narrow: 920px;
   --container-base: 1200px;
+  --container-content: 1344px;  /* 70% of 1920 viewport — project detail pages */
   --container-wide: 1400px;
   --container-max: 1600px;
 
@@ -220,6 +221,10 @@ code, pre {
 
 .container--narrow {
   max-width: var(--container-narrow);
+}
+
+.container--content {
+  max-width: var(--container-content);
 }
 
 .container--wide {

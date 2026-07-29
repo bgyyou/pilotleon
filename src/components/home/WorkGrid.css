@@ -90,6 +90,31 @@
   opacity: 1;
 }
 
+.workcard__cover-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s var(--ease-out-expo);
+}
+
+.workcard:hover .workcard__cover-img {
+  transform: scale(1.04);
+}
+
+.workcard__cover-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.18) 0%,
+    rgba(0, 0, 0, 0.05) 35%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  z-index: 0;
+}
+
 .workcard__cover-name {
   position: absolute;
   top: var(--space-4);

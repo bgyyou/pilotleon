@@ -6,29 +6,29 @@
     "contact": "联系"
   },
   "hero": {
-    "eyebrow": "AI 产品工程师 · 深圳",
+    "eyebrow": "AI 产品经理 · 深圳",
     "title_line1": "在 AI 时代，",
     "title_line2": "做出能上线的",
     "title_line3": "AI 产品。",
-    "subtitle": "我是 Leon。独立产品人，专注于多 Agent 系统与 AI 工具的工程化落地。三年时间，从营销人到 AI 产品工程师 — 用三个产品走完一遍 AI 时代产品从 0 到 1 的全链路。",
+    "subtitle": "我是 Leon。资深 AI 产品经理，3 年 B2C/B2B AI 产品经验，主导 4 款商业化 AI 产品从 0 到 1 全链路落地。专注企业级 Agent / RAG / SaaS 平台搭建，数据驱动产品迭代，能独立完成从 MVP 到规模化交付。",
     "cta_primary": "查看作品",
     "cta_secondary": "联系我",
     "status": "目前正在看深圳 AI 产品 / FDE 机会"
   },
   "about": {
     "eyebrow": "关于我",
-    "headline": "从香港到深圳，<accent>用三个产品</accent>走通 AI 时代独立 PM 的全链路。",
-    "body_1": "2022 年在爱丁堡读完语言学，误打误撞进了一家营销公司做跨境社媒。后来意识到：AI 工具已经把\"做出产品\"的门槛拉到地板，<strong>「被看见」和「被完成」才是新瓶颈</strong>。",
-    "body_2": "于是我开始自己做产品。先做 WDA — 解决企业主 AI 焦虑，看清 7 天 MVP 路径；再做 OPC — 用多 Agent 真的把 MVP 跑出来；最后做 MediaPilot — 解决产品做出来没声音的问题。",
-    "body_3": "三部曲完成之后，剩下三个项目都是\"我手痒想做的\" — Lumora 的产品宪法、JobHunter 的 RAG 闭环、Poker GTO 的工程规范。它们不商业化，但证明我能把工程纪律带到任何产品里。",
+    "headline": "3 年 AI 产品经理经验，<accent>主导 4 款商业化产品</accent>从 0 到 1 全链路落地。",
+    "body_1": "我是一名 AI 产品经理 — 主导过多款 B2C/B2B AI 产品从 0 到 1，涵盖企业级 Agent、RAG 知识库、SaaS 平台三种典型形态。<strong>数据驱动 + 跨团队协同 + 端到端交付</strong> 是我的核心工作方式：50+ 用户痛点调研、15 份数据分析报告、200+ 竞品分析，输出 PRD 推动功能落地与商业化。",
+    "body_2": "最近 3 个主力产品：<strong>WDA</strong> — 企业级工作流挖掘 Agent SaaS（决策式 Agent 架构 + 三层证据链评分）；<strong>JobHunter</strong> — 企业级智能求职 Agent（多轮对话 + pgvector + 五段式 Agent 协作链，已上线付费使用）；<strong>OPC</strong> — 一句话生成全栈应用的多 Agent 协作系统（6 角色 Agent 闭环 + 多租户隔离）。",
+    "body_3": "AI 时代的产品经理核心要回答三件事：<strong>方向、交付、传播</strong>。WDA 解决方向（看清 7 天 MVP + ROI）、OPC 解决交付（多 Agent 真的把 MVP 跑出来）、MediaPilot 解决传播（产品做出来没声音的问题）。三部曲之后，Lumora / JobHunter / Poker GTO 继续沿各自商业化路径迭代。",
     "stats": {
-      "products": { "value": "6", "label": "可演示产品" },
+      "products": { "value": "4", "label": "从 0 到 1 商业化产品" },
       "agents": { "value": "9", "label": "Agent 协同管线" },
       "shipped": { "value": "2", "label": "已上线商业产品" },
       "tests": { "value": "193", "label": "工程测试覆盖" }
     },
     "experience_eyebrow": "经历",
-    "experience_note": "从社媒到 AI 产品的转型路径"
+    "experience_note": "从跨境营销到 AI 产品的转型路径"
   },
   "trilogy": {
     "eyebrow": "三部曲 · AI 时代独立产品心法",
@@ -76,8 +76,8 @@
   },
   "work": {
     "eyebrow": "其他作品",
-    "headline": "三部曲之外，<accent>手痒做的</accent>三个项目。",
-    "lead": "它们不商业化，但每一个都解决了一个真实问题。",
+    "headline": "三部曲之外，<accent>三个独立商业化路径</accent>的延展产品。",
+    "lead": "每一个都瞄准一个独立付费场景，并按长期变现路线推进 — 情感 AI 工具订阅 / 招聘 SaaS / 训练工具付费版。",
     "view_detail": "查看 →",
     "view_code": "代码 →"
   },
@@ -98,6 +98,8 @@
     "headline": "在找<accent>深圳 AI 产品 / FDE</accent>的机会。",
     "lead": "如果你看到这里，欢迎聊聊。我可以一周内到深圳，远程或现场都可。",
     "email": "邮箱",
+    "phone_cn": "电话 · 中国大陆",
+    "phone_hk": "电话 · 中国香港",
     "github": "GitHub",
     "linkedin": "LinkedIn",
     "wechat": "微信"
@@ -108,17 +110,25 @@
   },
   "project_detail": {
     "back": "← 返回作品",
+    "background": "项目背景",
+    "challenge": "项目难点",
+    "approach": "如何解决",
+    "results": "实现成果",
     "problem": "问题",
     "solution": "方案",
     "architecture": "架构",
     "code_deep_dive": "关键代码",
-    "screenshots": "截图",
+    "screenshots": "实现成果 · 截图",
     "links": "链接",
     "view_github": "GitHub →",
     "view_docs": "文档 →",
     "view_demo": "演示 →",
     "metrics_title": "关键指标",
     "tech_title": "技术栈",
-    "status_title": "状态"
+    "status_title": "状态",
+    "pending_badge": "待补",
+    "pending_hint": "这一节 Leon 还没填，先留个空。",
+    "section_index_label": "Section",
+    "gallery_placeholder": "等待上传"
   }
 }

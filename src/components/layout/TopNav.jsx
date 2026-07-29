@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -9,6 +9,8 @@ export default function TopNav() {
   const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [sectionTransition, setSectionTransition] = useState(false);
+  const transitionTimersRef = useRef([]);
   const isHome = location.pathname === '/';
 
   useEffect(() => {
@@ -18,33 +20,70 @@ export default function TopNav() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
+  useEffect(() => {
+    return () => {
+      transitionTimersRef.current.forEach((timer) => window.clearTimeout(timer));
+      transitionTimersRef.current = [];
+    };
+  }, []);
+
   const switchLang = (lng) => {
     i18n.changeLanguage(lng);
     setLangOpen(false);
   };
 
-  const isProject = location.pathname.startsWith('/work/');
+  const navigateToSection = (event, selector) => {
+    event.preventDefault();
+
+    const target = document.querySelector(selector);
+    if (!target) return;
+
+    transitionTimersRef.current.forEach((timer) => window.clearTimeout(timer));
+    transitionTimersRef.current = [];
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const updateHash = () => window.history.replaceState(null, '', selector);
+
+    if (prefersReducedMotion) {
+      target.scrollIntoView({ block: 'start' });
+      updateHash();
+      return;
+    }
+
+    setSectionTransition(true);
+
+    const scrollTimer = window.setTimeout(() => {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      updateHash();
+    }, 180);
+
+    const fadeOutTimer = window.setTimeout(() => {
+      setSectionTransition(false);
+    }, 760);
+
+    transitionTimersRef.current = [scrollTimer, fadeOutTimer];
+  };
 
   return (
-    <motion.header
+    <>
+      <motion.header
       className={`topnav ${scrolled ? 'topnav--scrolled' : ''}`}
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
     >
       <div className="topnav__inner container">
-        <Link to="/" className="topnav__logo" aria-label="Home">
-          <span className="topnav__logo-mark">L</span>
-          <span className="topnav__logo-text">eon</span>
+        <Link to="/" className="topnav__logo" aria-label="PilotLeon — Home">
+          <span className="topnav__logo-name">PilotLeon</span>
           <span className="topnav__logo-dot" />
         </Link>
 
         {isHome ? (
           <nav className="topnav__nav" aria-label="Primary">
-            <a href="#work" className="topnav__link">{t('nav.work')}</a>
-            <a href="#about" className="topnav__link">{t('nav.about')}</a>
-            <a href="#stack" className="topnav__link">{t('nav.stack')}</a>
-            <a href="#contact" className="topnav__link">{t('nav.contact')}</a>
+            <a href="#work" className="topnav__link" onClick={(event) => navigateToSection(event, '#work')}>{t('nav.work')}</a>
+            <a href="#about" className="topnav__link" onClick={(event) => navigateToSection(event, '#about')}>{t('nav.about')}</a>
+            <a href="#stack" className="topnav__link" onClick={(event) => navigateToSection(event, '#stack')}>{t('nav.stack')}</a>
+            <a href="#contact" className="topnav__link" onClick={(event) => navigateToSection(event, '#contact')}>{t('nav.contact')}</a>
           </nav>
         ) : (
           <div className="topnav__nav">
@@ -96,6 +135,20 @@ export default function TopNav() {
           </div>
         </div>
       </div>
-    </motion.header>
+      </motion.header>
+
+      <AnimatePresence>
+        {sectionTransition && (
+          <motion.div
+            className="topnav__section-fade"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.24, ease: [0.16, 1, 0.3, 1] }}
+            aria-hidden="true"
+          />
+        )}
+      </AnimatePresence>
+    </>
   );
 }

@@ -49,12 +49,14 @@
   color: var(--text-primary);
 }
 
-.topnav__logo-mark {
+.topnav__logo-name {
   display: inline-block;
   font-weight: 700;
-  color: var(--accent);
-  font-size: 1.1em;
-  margin-right: 1px;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, var(--text-primary) 0%, var(--text-primary) 48%, var(--accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .topnav__logo-dot {
@@ -194,6 +196,24 @@
 
 .topnav__lang-item.is-active .topnav__lang-item-sub {
   color: var(--accent);
+}
+
+.topnav__section-fade {
+  position: fixed;
+  inset: 0;
+  z-index: calc(var(--z-nav) - 1);
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(0, 255, 209, 0.08), transparent 34%),
+    rgba(10, 10, 11, 0.72);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topnav__section-fade {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {

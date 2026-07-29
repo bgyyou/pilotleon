@@ -104,10 +104,22 @@ export default function Trilogy() {
 
               {/* Decorative side */}
               <div className="trilogy__act-visual" aria-hidden="true">
+                {/* Fallback gradient (always underneath) */}
                 <div
                   className="trilogy__act-gradient"
                   style={{ background: act.coverGradient }}
                 />
+                {/* Real cover image (gallery[0]) — sits on top of gradient */}
+                {act.gallery?.[0]?.image && (
+                  <img
+                    className="trilogy__act-img"
+                    src={act.gallery[0].image}
+                    alt=""
+                    loading="lazy"
+                  />
+                )}
+                {/* Dark scrim for text readability */}
+                <div className="trilogy__act-scrim" />
                 <div className="trilogy__act-lines">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <div

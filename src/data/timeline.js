@@ -50,15 +50,6 @@ export const timeline = [
     type: 'work'
   },
   {
-    year: '2022.05',
-    title: '科罗拉多大学博尔德分校',
-    subtitle: 'Master of Data Science',
-    location: 'Colorado, USA',
-    description: '研究生，Data Science专业。',
-    achievements: [],
-    type: 'education'
-  },
-  {
     year: '2017.09 - 2020.06',
     title: 'The University of Edinburgh (QS 16)',
     subtitle: 'Bachelor of Art in English Language & Linguistics',

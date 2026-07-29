@@ -1,20 +1,20 @@
 export const profile = {
-  name: 'Leon',
-  title: 'AI-Powered Marketer & Developer',
-  subtitle: 'Hong Kong Top Talent Pass Holder (Valid until 2026 May)',
+  name: 'Leon Zheng (郑浩文)',
+  title: 'AI 产品经理 · AI Product Manager',
+  subtitle: '爱丁堡大学 · 英语语言学学士 · QS 16',
   photo: '/images/profile.jpg',
-  summary: 'AI赋能的营销人员和开发者，通过自动化工作流推动收入和效率提升。构建并部署了AI驱动工具（MediaPilot、InsuranceHub），使运营效率提升300%。结合营销专业知识和全栈开发能力。',
+  summary: '3 年 B2C/B2B AI 产品经验，主导 4 款商业化 AI 产品从 0 到 1 全链路落地。专注企业级 Agent / RAG / SaaS 平台搭建，擅长多智能体编排与向量知识库落地。数据驱动产品迭代，独立完成 MVP 到规模化交付，跨研发/业务团队协同能力强。',
   highlights: [
-    'AI工作流效率提升300%',
-    '内容创作时间减少70%',
-    '小红书粉丝5000+，单篇阅读20万+',
-    '直接产生收入120万港元',
-    '香港高才通签证持有者'
+    '主导 4 款 AI 产品从 0 到 1（WDA / JobHunter / OPC / MediaPilot）',
+    '3 年 B2C/B2B AI 产品经验，专注 Agent · RAG · SaaS',
+    '用户痛点调研 50+，多份 PRD 与数据分析报告输出',
+    '5+ 行业 AI 落地经验（金融 · 教育 · 移民 · 房产 · 招聘 · 营销）',
+    '爱丁堡大学（QS 16）英语语言学学士',
   ],
   coreStrengths: [
-    'AI工具集成与自动化',
-    '内容策略与数据驱动营销',
-    '全栈开发（React + Supabase）',
-    '跨平台运营（小红书、社群）'
-  ]
+    '产品设计 (Figma · Axure · 墨刀)',
+    '数据分析 (SQL · Mixpanel · A/B 测试)',
+    'Agent 编排 (LangChain · RAG · pgvector)',
+    '工程协作 (Python · FastAPI · Docker)',
+  ],
 };

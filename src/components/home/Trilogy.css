@@ -288,6 +288,32 @@
   transform: scale(1.06);
 }
 
+.trilogy__act-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: transform 1.2s var(--ease-out-expo);
+}
+
+.trilogy__act-visual:hover .trilogy__act-img {
+  transform: scale(1.04);
+}
+
+.trilogy__act-scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.15) 0%,
+    rgba(0, 0, 0, 0.05) 40%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+  z-index: 2;
+}
+
 .trilogy__act-lines {
   position: absolute;
   inset: 0;

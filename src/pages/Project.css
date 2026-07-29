@@ -3,7 +3,9 @@
   min-height: 100vh;
 }
 
-/* === HERO === */
+/* ============================================================
+   HERO (Section 00 · Project Name)
+   ============================================================ */
 .project__hero {
   position: relative;
   padding: calc(var(--nav-height) + var(--space-16)) 0 var(--space-20);
@@ -85,12 +87,27 @@
 }
 
 .project__title {
-  font-size: var(--fs-6xl);
-  font-weight: 700;
-  line-height: 0.95;
-  letter-spacing: -0.04em;
+  display: inline-flex;
+  align-items: baseline;
+  min-height: 1.2em;
+  max-width: 980px;
+  font-size: var(--fs-4xl);
+  font-weight: 650;
+  line-height: 1.14;
+  letter-spacing: -0.025em;
   color: var(--text-primary);
   margin-bottom: var(--space-5);
+}
+
+.project__title-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 0.82em;
+  margin-left: 8px;
+  background: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+  transform: translateY(0.08em);
+  animation: blink 1.05s step-end infinite;
 }
 
 :lang(zh) .project__title {
@@ -177,38 +194,135 @@
   font-family: var(--font-cn);
 }
 
-/* === BODY === */
+/* ============================================================
+   BODY · 4-Section Layout (v2.1)
+   ============================================================ */
 .project__body {
   padding: var(--space-12) 0 var(--space-24);
 }
 
 .project__section {
   padding: var(--space-16) 0;
+  position: relative;
 }
 
-.project__section--arch {
+.project__section--background {
+  /* default: clean, centered, narrow */
+}
+
+.project__section--challenge {
+  /* special: warn-styled, narrow, attention-grabbing */
   background: var(--bg-elevated);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
 }
 
-.project__section--code {
+.project__section--challenge::before {
+  content: '';
+  position: absolute;
+  top: 12%;
+  left: -8%;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #FF8A4C 0%, transparent 62%);
+  opacity: 0.06;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.project__section--approach {
+  background: var(--bg-base);
+}
+
+.project__section--results {
   background: var(--bg-elevated);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
+  position: relative;
+  overflow: hidden;
 }
 
+.project__section--results::before {
+  content: '';
+  position: absolute;
+  top: 8%;
+  right: -12%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 62%);
+  opacity: 0.045;
+  filter: blur(90px);
+  pointer-events: none;
+}
+
+.project__section--links {
+  padding: var(--space-12) 0;
+}
+
+.project__section--next {
+  padding: var(--space-8) 0 var(--space-16);
+}
+
+/* ============================================================
+   Section Head · 序号 + eyebrow + fallback 角标
+   ============================================================ */
+.project__section-head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-5);
+}
+
+.project__section-index {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.project__section-index-label {
+  opacity: 0.5;
+}
+
+.project__section-index-num {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: var(--fs-sm);
+  letter-spacing: 0.08em;
+}
+
+.project__section-fallback {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FF8A4C;
+  padding: 2px 8px;
+  background: rgba(255, 138, 76, 0.08);
+  border: 1px solid rgba(255, 138, 76, 0.2);
+  border-radius: var(--radius-full);
+}
+
+/* ============================================================
+   Lead text (per section)
+   ============================================================ */
 .project__lead {
   font-size: var(--fs-lg);
   line-height: 1.75;
   color: var(--text-secondary);
-  margin-top: var(--space-4);
-}
-
-.project__lead--wide {
-  max-width: 920px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-top: var(--space-2);
+  max-width: 100%;
 }
 
 :lang(zh) .project__lead {
@@ -226,9 +340,102 @@
   font-style: normal;
 }
 
+.project__lead--challenge {
+  position: relative;
+  padding-left: var(--space-6);
+  border-left: 3px solid #FF8A4C;
+  font-size: var(--fs-lg);
+}
+
+:lang(zh) .project__lead--challenge {
+  font-family: var(--font-cn);
+  line-height: 1.95;
+}
+
+/* ============================================================
+   Pending Placeholder (待补)
+   ============================================================ */
+.project__pending {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-6) var(--space-6);
+  border: 1.5px dashed var(--border-medium);
+  border-radius: var(--radius-lg);
+  background: var(--bg-base);
+  min-height: 120px;
+  justify-content: center;
+}
+
+.project__pending-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  padding: 4px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+}
+
+.project__pending-hint {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+  line-height: 1.55;
+  max-width: 520px;
+}
+
+:lang(zh) .project__pending-hint {
+  font-family: var(--font-cn);
+}
+
+/* ============================================================
+   Code deep dive (Section 03 内嵌)
+   ============================================================ */
+.project__code {
+  margin-top: var(--space-10);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.project__code-title {
+  font-family: var(--font-display);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: 0 0 var(--space-3);
+}
+
+:lang(zh) .project__code-title {
+  font-family: var(--font-cn);
+  font-weight: 700;
+}
+
+.project__code-desc {
+  font-size: var(--fs-base);
+  line-height: 1.7;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 0 var(--space-6);
+}
+
+:lang(zh) .project__code-desc {
+  font-family: var(--font-cn);
+  line-height: 1.85;
+}
+
+/* ============================================================
+   Tech chips (Section 03 内嵌)
+   ============================================================ */
 .project__tech {
-  max-width: 920px;
-  margin: var(--space-8) auto 0;
+  margin-top: var(--space-8);
   padding: var(--space-6);
   background: var(--bg-base);
   border: 1px solid var(--border-subtle);
@@ -266,12 +473,37 @@
   color: var(--accent);
 }
 
-/* === Highlights === */
+/* ============================================================
+   Section 04 · 实现成果 内部组件
+   ============================================================ */
+
+/* Metrics row (大数字) */
+.project__metrics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+  padding: var(--space-6);
+  background: var(--bg-base);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+}
+
+.project__metric-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--space-3) 0;
+}
+
+/* Highlights list */
 .project__highlights {
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
-  margin-top: var(--space-4);
+  gap: var(--space-2);
+  margin-top: var(--space-8);
+  list-style: none;
+  padding: 0;
 }
 
 .project__highlight {
@@ -283,6 +515,10 @@
   font-size: var(--fs-base);
   color: var(--text-secondary);
   line-height: 1.6;
+}
+
+.project__highlight:last-child {
+  border-bottom: none;
 }
 
 :lang(zh) .project__highlight {
@@ -298,79 +534,186 @@
   flex-shrink: 0;
 }
 
-/* === Code section === */
-.project__code-title {
-  font-family: var(--font-display);
-  font-size: var(--fs-3xl);
-  font-weight: 600;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
-  margin: var(--space-4) 0 var(--space-3);
+/* Gallery */
+.project__gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+  margin-top: var(--space-10);
 }
 
-:lang(zh) .project__code-title {
+/* 上下排版: 介绍 → 图片,字和图同宽 (父容器 70% 屏宽) */
+.project__gallery-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  align-items: stretch;
+}
+
+.project__gallery-copy {
+  position: relative;
+  padding: 0 0 var(--space-4) 0;
+  border-left: none;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.project__gallery-index {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.16em;
+  color: var(--accent);
+  margin-bottom: var(--space-3);
+}
+
+.project__gallery-title {
+  font-size: var(--fs-xl);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-3);
+}
+
+:lang(zh) .project__gallery-title {
   font-family: var(--font-cn);
   font-weight: 700;
 }
 
-.project__code-desc {
+.project__gallery-body {
   font-size: var(--fs-base);
   line-height: 1.7;
   color: var(--text-secondary);
-  max-width: 800px;
-  margin-bottom: var(--space-6);
+  margin: 0;
 }
 
-:lang(zh) .project__code-desc {
+:lang(zh) .project__gallery-body {
   font-family: var(--font-cn);
   line-height: 1.85;
 }
 
-/* === Screenshots === */
-.project__screenshots {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-  margin-top: var(--space-6);
-}
-
-.project__shot {
+.project__gallery-frame {
   position: relative;
-  aspect-ratio: 16 / 10;
-  border-radius: var(--radius-md);
-  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  padding: 8px;
   border: 1px solid var(--border-subtle);
-  background: var(--bg-elevated);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.015)),
+    var(--bg-elevated);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+  overflow: hidden;
 }
 
-.project__shot-bg {
+.project__gallery-frame::before {
+  content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.18;
-  filter: blur(40px);
+  border-radius: inherit;
+  border: 1px solid color-mix(in srgb, var(--shot-color, var(--accent)) 38%, transparent);
+  opacity: 0.45;
+  pointer-events: none;
 }
 
-.project__shot-label {
-  position: absolute;
-  inset: 0;
+.project__gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: calc(var(--radius-lg) - 6px);
+  background: var(--bg-base);
+}
+
+/* 截图占位 (等用户上传) — 放大 + 动效,让它"有存在感" */
+.project__gallery-placeholder {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+  gap: var(--space-3);
+  border: 1.5px dashed var(--border-medium);
+  border-radius: calc(var(--radius-lg) - 6px);
+  background:
+    linear-gradient(135deg,
+      color-mix(in srgb, var(--shot-color, var(--accent)) 6%, transparent),
+      transparent 60%),
+    var(--bg-base);
+  padding: var(--space-5);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project__gallery-placeholder::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    color-mix(in srgb, var(--shot-color, var(--accent)) 12%, transparent) 0%,
+    transparent 65%
+  );
+  animation: placeholder-pulse 3.4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.project__gallery-placeholder-icon {
+  font-size: 44px;
+  color: color-mix(in srgb, var(--shot-color, var(--accent)) 70%, var(--text-muted));
+  opacity: 0.85;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.project__gallery-placeholder-text {
   font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  position: relative;
+  z-index: 1;
+}
+
+.project__gallery-placeholder-hint {
   font-size: var(--fs-sm);
   color: var(--text-tertiary);
-  letter-spacing: 0.04em;
+  line-height: 1.45;
+  max-width: 220px;
+  position: relative;
+  z-index: 1;
 }
 
-.project__shot-sub {
-  font-size: var(--fs-xs);
+:lang(zh) .project__gallery-placeholder-hint {
+  font-family: var(--font-cn);
+}
+
+.project__gallery-placeholder-counter {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
+  padding: 4px 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  margin-top: var(--space-1);
+  position: relative;
+  z-index: 1;
 }
 
-/* === Links === */
+@keyframes placeholder-pulse {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50%      { opacity: 1; transform: scale(1.08); }
+}
+
+/* ============================================================
+   Links
+   ============================================================ */
 .project__links {
   text-align: center;
 }
@@ -429,17 +772,47 @@
   border-color: var(--accent);
 }
 
+/* ============================================================
+   Reduced motion + responsive
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .project__title-cursor {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .project__lead--challenge {
+    padding-left: var(--space-4);
+  }
+}
+
 @media (max-width: 768px) {
   .project__title {
     font-size: var(--fs-4xl);
   }
+
   .project__metrics {
     grid-template-columns: repeat(2, 1fr);
   }
-  .project__screenshots {
-    grid-template-columns: 1fr;
+
+  .project__gallery {
+    gap: var(--space-12);
   }
+
+  .project__gallery-copy {
+    padding: var(--space-4);
+  }
+
   .project__meta {
     gap: var(--space-5);
+  }
+
+  .project__section-head {
+    gap: var(--space-2);
+  }
+
+  .project__metrics-row {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

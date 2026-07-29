@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { experience } from '../../data/experience';
+import { profile } from '../../data/profile.js';
 import './About.css';
 
 const fadeUp = {
@@ -27,6 +28,31 @@ export default function About() {
             className="about__headline"
             dangerouslySetInnerHTML={{ __html: t('about.headline') }}
           />
+        </motion.div>
+
+        {/* === 个人卡片：毕业照 + 基础信息 === */}
+        <motion.div
+          className="about__intro"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        >
+          <div className="about__intro-photo">
+            <img src={profile.photo} alt={profile.name} />
+            <div className="about__intro-photo-tag">爱丁堡 2020</div>
+          </div>
+          <div className="about__intro-info">
+            <div className="about__intro-name">{profile.name}</div>
+            <div className="about__intro-title">{profile.title}</div>
+            <div className="about__intro-subtitle">{profile.subtitle}</div>
+
+            <div className="about__intro-strengths">
+              {profile.coreStrengths.map((s, i) => (
+                <span key={i} className="about__intro-chip">{s}</span>
+              ))}
+            </div>
+          </div>
         </motion.div>
 
         <div className="about__body">

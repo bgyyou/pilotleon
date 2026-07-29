@@ -1,10 +1,17 @@
 /**
  * Contact / Social
+ *
+ * 邮箱 / 电话 / 微信 — 通用商业联系信息
  */
 export const contact = {
-  email: 'haowen.zheng@protonmail.com',
-  github: 'https://github.com/haowenzheng-art',
+  name: 'Leon Zheng (郑灏文)',
+  email: 'bgyyou99@163.com',
+  phone: {
+    cn: '+86 13711171888',
+    hk: '+852 6222 4603',
+  },
+  wechat: 'Bgyyou99_',
+  github: 'https://github.com/bgyyou',
   linkedin: 'https://linkedin.com/in/leon-zheng',
-  wechat: 'leon_zhw',
   location: { zh: '目前在深圳', en: 'Currently in Shenzhen' },
 };

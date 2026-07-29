@@ -42,6 +42,18 @@ export const projects = [
         body: { zh: "把\"我想做一个 X 流程的 AI 改造\"变成可执行方案。WDA 自动检索行业资料,拆解标准工作流,识别痛点,输出 7 天 MVP 计划——5 分钟拿到一份有据可查的产品方案,而不是一份模糊的咨询 PPT", en: "Turn \"I want to AI-transform process X\" into an executable plan. WDA auto-searches industry material, decomposes standard workflows, identifies pain points, outputs a 7-day MVP plan — get a data-backed product proposal in 5 minutes, not a vague consulting deck." }
       },
       {
+        image: '/images/projects/gallery/wda-08-q-and-a.png',
+        alt: { zh: "WDA 问一个问题 → 拿一份方案 - 智能检索 / 流程拆解 / MVP 方案", en: "WDA: question to proposal - smart search / workflow decomp / MVP plan" },
+        title: { zh: "问一个问题，拿一份方案：智能检索 + 流程拆解 + MVP", en: "Ask one question, get a plan: smart search + workflow decomp + MVP" },
+        body: { zh: "传统 AI 聊天只能给建议,WDA 把研究 + 拆解 + 方案三件事一次做完。① 智能检索:Agent 自动搜索公开资料 + 三层过滤(规则/LLM/关键词加权),留下真实流程文章,过滤掉产品页/百科/AI 工具站 ② 流程拆解:9 步状态机硬约束,工具调用顺序 100% 稳定,不再靠 LLM \"自觉\" ③ MVP 方案:7 天详细任务清单 + ROI 测算 + 证据链,每条结论标注来源 URL + 原文片段,可直接交付给老板或客户", en: "Traditional AI chat only gives advice; WDA does research + decomp + plan in one go. ① Smart search: agent auto-searches public material + 3-layer filter (rules / LLM / keyword weighting) — keeps real workflow articles, filters out product pages / wiki / AI tool sites ② Workflow decomp: 9-step state machine hard constraints, 100% stable tool call order, no LLM \"self-awareness\" ③ MVP plan: 7-day task list + ROI calc + evidence chain, every conclusion tagged with source URL + original snippet, directly deliverable to boss or client." }
+      },
+      {
+        image: '/images/projects/gallery/wda-09-why-wda.png',
+        alt: { zh: "WDA 设计初衷 - 为什么是 WDA 而不是又一个聊天 AI", en: "WDA design rationale - why WDA, not another chat AI" },
+        title: { zh: "为什么是 WDA，而不是又一个聊天 AI？", en: "Why WDA, not just another chat AI?" },
+        body: { zh: "调研 100 个真实业务场景后发现:用户最痛的不是\"问不到\",而是\"问到的不敢用\"。传统 AI 助手能回答\"怎么做银行贷款审批\",但答案像维基百科——读起来都对,用起来抓瞎。WDA 的解法:每条结论背后都有真实证据链 (URL + 原文片段 + 相关度评分) / 9 步状态机硬约束,工具调用顺序 100% 稳定 / force_finish 兜底,即便 LLM 抽风也会强制生成报告 / 三层证据过滤,产品页/百科/字典污染全部 hard cap / 5-10 分钟出一份可执行方案,30 天内可二次迭代", en: "After 100 real business scenarios: the pain isn't \"can't find an answer\" — it's \"the answer isn't trustworthy\". Traditional AI can answer \"how to do bank loan approval\" but the answer reads like Wikipedia — sounds right, useless in practice. WDA's fix: every conclusion backed by real evidence chain (URL + original snippet + relevance score) / 9-step state machine hard constraints, 100% stable tool order / force_finish fallback forces report output even if LLM hallucinates / 3-layer evidence filter, product pages / wiki / dictionary contamination all hard-capped / executable plan in 5-10 minutes, re-iterable within 30 days." }
+      },
+      {
         image: '/images/projects/gallery/wda-02-evidence-chain.png',
         alt: { zh: "WDA 工作流证据链", en: "WDA workflow evidence chain" },
         title: { zh: "证据链：18 条来源 + 三层评分 + LLM 摘要", en: "Evidence chain: 18 sources + 3-layer score + LLM summary" },

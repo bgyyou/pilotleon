@@ -36,10 +36,10 @@ export const projects = [
 
     gallery: [
       {
-        image: '/images/projects/gallery/wda-01-agent-timeline.png',
-        alt: { zh: "WDA 工作流时间线 - Agent 执行轨迹", en: "WDA workflow timeline - Agent execution trace" },
-        title: { zh: "Agent 执行轨迹：30 轮 LLM 工具调用全过程", en: "Agent execution trace: 30-round LLM tool call sequence" },
-        body: { zh: "Run #28 实际跑出来的轨迹:search_web (DuckDuckGo) → score_evidence_batch (三层评分) → fetch_page_batch (Playwright 抓取) → 18 次迭代后才完成。每一步标了耗时、token、状态。\"agent 跑飞了\"不再是黑盒——直接看轨迹复盘", en: "Actual Run #28 trajectory: search_web (DuckDuckGo) → score_evidence_batch (3-layer scoring) → fetch_page_batch (Playwright) → 18 iterations to complete. Each step shows time, tokens, status. \"Agent drifted\" is no longer a black box — review the trace directly." }
+        image: '/images/projects/gallery/wda-cover-new.png',
+        alt: { zh: "WDA 营销页 hero - AI Agent 驱动的业务流程研究助手", en: "WDA marketing hero - AI Agent-powered business research assistant" },
+        title: { zh: "AI Agent 驱动的业务流程研究助手", en: "AI Agent-powered business research assistant" },
+        body: { zh: "把\"我想做一个 X 流程的 AI 改造\"变成可执行方案。WDA 自动检索行业资料,拆解标准工作流,识别痛点,输出 7 天 MVP 计划——5 分钟拿到一份有据可查的产品方案,而不是一份模糊的咨询 PPT", en: "Turn \"I want to AI-transform process X\" into an executable plan. WDA auto-searches industry material, decomposes standard workflows, identifies pain points, outputs a 7-day MVP plan — get a data-backed product proposal in 5 minutes, not a vague consulting deck." }
       },
       {
         image: '/images/projects/gallery/wda-02-evidence-chain.png',
@@ -370,10 +370,10 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/mediapilot-01-trending-search.png',
-        alt: { zh: "MediaPilot 热点搜索", en: "MediaPilot trending search" },
-        title: { zh: "热点搜索：关键词 + 全网热搜 + 5 源聚合", en: "Trending search: keyword + hot list + 5-source aggregation" },
-        body: { zh: "顶部 Tab 切换\"关键词搜索\"和\"全网热搜\"。关键词搜索:输入话题 → 选平台(百度新闻/今日头条)→ 时间范围 1-30 天滑动条 → \"开始搜索\"。5 个相关热点卡片,每条带发布时间、原文链接、\"去生成口播文案/拍摄脚本\"快捷入口、导出 CSV/Excel", en: "Top tabs toggle \"Keyword Search\" / \"Hot List\". Keyword flow: topic input → platform select (Baidu/Toutiao) → time range 1-30 days slider → \"Search\". 5 hot-topic cards, each with publish time, source link, \"Generate Copy/Script\" shortcuts, CSV/Excel export." }
+        image: '/images/projects/gallery/mediapilot-cover-new.png',
+        alt: { zh: "MediaPilot 营销页 hero - 内容创作全流程一站式解决方案", en: "MediaPilot marketing hero - end-to-end content creation solution" },
+        title: { zh: "内容创作全流程，一站式解决方案", en: "End-to-end content creation, one-stop solution" },
+        body: { zh: "从热点发现到内容创作,从数据分析到发布规划——让每一个创作环节都更高效。六大核心模块:拍摄脚本 / 热点搜索 / 口播文案 / 视频分析 / 语音转写 / 话题订阅", en: "From trend discovery to content creation, from data analysis to publishing planning — make every creative step more efficient. Six core modules: shoot script / trending search / voiceover copy / video analysis / voice-to-text / topic subscription." }
       },
       {
         image: '/images/projects/gallery/mediapilot-02-voiceover-input.png',

@@ -18,9 +18,9 @@ const SLOGANS_EN = [
 ];
 
 const HERO_IMAGES = [
-  { src: '/hero/01-hongkong.png', label: 'Hong Kong' },
-  { src: '/hero/02-shenzhen.png', label: 'Shenzhen' },
-  { src: '/hero/03-ai-brain.png', label: 'AI' },
+  { src: '/hero/01-hongkong.webp', label: 'Hong Kong' },
+  { src: '/hero/02-shenzhen.webp', label: 'Shenzhen' },
+  { src: '/hero/03-ai-brain.webp', label: 'AI' },
 ];
 
 const PHRASES_ZH = [

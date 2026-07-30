@@ -36,7 +36,7 @@ export const projects = [
 
     gallery: [
       {
-        image: '/images/projects/gallery/wda-cover-new.png',
+        image: '/images/projects/gallery/wda-cover-new.webp',
         alt: { zh: "WDA 营销页 hero - AI Agent 驱动的业务流程研究助手", en: "WDA marketing hero - AI Agent-powered business research assistant" },
         title: { zh: "AI Agent 驱动的业务流程研究助手", en: "AI Agent-powered business research assistant" },
         body: { zh: "把\"我想做一个 X 流程的 AI 改造\"变成可执行方案。WDA 自动检索行业资料,拆解标准工作流,识别痛点,输出 7 天 MVP 计划——5 分钟拿到一份有据可查的产品方案,而不是一份模糊的咨询 PPT", en: "Turn \"I want to AI-transform process X\" into an executable plan. WDA auto-searches industry material, decomposes standard workflows, identifies pain points, outputs a 7-day MVP plan — get a data-backed product proposal in 5 minutes, not a vague consulting deck." }
@@ -201,7 +201,7 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/opc-01-landing.png',
+        image: '/images/projects/gallery/opc-01-landing.webp',
         alt: { zh: 'OPC 营销首页', en: 'OPC marketing landing' },
         title: { zh: '营销首页：让一句话变成产品', en: 'Marketing landing: turn a prompt into a product' },
         body: { zh: '"一家公司通常需要 CEO、PM、设计师、前后端工程师、QA，OPC 让 7 个 AI Agent 同时接管这些角色——你只需要说一句话，然后看着进度条跑完。" 营销首页把价值主张压在一屏，背景是细密网格 + 黑底色，CTA 是免费开始。', en: 'One-pane marketing pitch: "A company usually needs CEO, PM, designer, frontend + backend engineers, QA — OPC lets 7 AI agents run all those roles. You just say a sentence, then watch the progress bar." Grid background, black canvas, "Get started" CTA.' },
@@ -382,7 +382,7 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/mediapilot-cover-new.png',
+        image: '/images/projects/gallery/mediapilot-cover-new.webp',
         alt: { zh: "MediaPilot 营销页 hero - 内容创作全流程一站式解决方案", en: "MediaPilot marketing hero - end-to-end content creation solution" },
         title: { zh: "内容创作全流程，一站式解决方案", en: "End-to-end content creation, one-stop solution" },
         body: { zh: "从热点发现到内容创作,从数据分析到发布规划——让每一个创作环节都更高效。六大核心模块:拍摄脚本 / 热点搜索 / 口播文案 / 视频分析 / 语音转写 / 话题订阅", en: "From trend discovery to content creation, from data analysis to publishing planning — make every creative step more efficient. Six core modules: shoot script / trending search / voiceover copy / video analysis / voice-to-text / topic subscription." }
@@ -509,7 +509,7 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/lumora-01-splash.png',
+        image: '/images/projects/gallery/lumora-01-splash.webp',
         alt: { zh: 'Lumora 启动页 + 选精灵', en: 'Lumora splash + spirit selection' },
         title: { zh: '启动页不是空聊天框,是精灵卡片网格', en: 'Splash is a spirit gallery, not an empty chat' },
         body: { zh: '副标题"陪你走过这段,然后,希望你不再需要我。"——产品宪法从第一屏就立住了。下面是温柔/灵动两只精灵卡片,点击进入对话。情绪从第一屏就落在"思念被保存下来",而不是"又来一个 AI 聊天框"。', en: 'Subtitle \"Walk with you through this, then I hope you no longer need me.\" The product constitution is set from screen one. Below: two spirit cards (温柔/灵动), click to enter chat. The mood is \"memories preserved\", not \"another AI chat box\".' },
@@ -607,7 +607,7 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/jobhunter-01-landing.png',
+        image: '/images/projects/gallery/jobhunter-01-landing.webp',
         alt: { zh: "JobHunter 求职智能体营销首页", en: "JobHunter marketing landing" },
         title: { zh: "求职智能体：2w+ JD / 30+ 岗位 / 100+ 公司", en: "Job-seeking agent: 2w+ JDs / 30+ categories / 100+ companies" },
         body: { zh: "\"你的全能求职智能体\" 营销首页:整理全行业 2w+ 真实 JD 数据,自动分析差距、改写经历、生成定制简历。底部 4 个数据 metric:2w+ 真实 JD 数据 / 30+ 岗位类目 / 100+ 覆盖公司 / 5+ 主流招聘源——5 分钟生成定制简历,不是套模板", en: "\"Your all-in-one job-seeking agent\" landing: 2w+ real JDs across industries, auto gap analysis / experience rewrite / custom resume. Bottom 4 metrics: 2w+ real JDs / 30+ categories / 100+ companies / 5+ sources — 5-min custom resume, not template fill." }
@@ -716,7 +716,7 @@ def _decide_tool_choice(executed_tools, failed_counts, is_last):
 
     gallery: [
       {
-        image: '/images/projects/gallery/pokergto-01-gto-advisor.png',
+        image: '/images/projects/gallery/pokergto-01-gto-advisor.webp',
         alt: { zh: 'Poker GTO Trainer 目标 UI 概览(mockup)', en: 'Poker GTO Trainer target UI overview (mockup)' },
         title: { zh: '目标 UI:6-Max 桌 + GTO Advisor 实时建议', en: 'Target UI: 6-Max table + GTO Advisor in real time' },
         body: { zh: '6-Max 桌 + 中央 5 张公共牌 + 6 玩家位置 + 底部 RAISE 滑块 + Fold/Call/Raise/All-In 4 按钮。右侧 GTO Advisor 实时显示:YOUR HAND(手牌)/ RECOMMENDATION(Action / Size / Equity / Confidence)/ ACTION FREQUENCIES(Raise 68% / Call 22% / Fold 10% 频率条)/ SESSION(Hands 42 / Win Rate +8.3 BB)。H 键唤起 GTO 提示。', en: '6-Max table + 5 community cards + 6 player positions + bottom RAISE slider + Fold/Call/Raise/All-In 4 buttons. Right side: GTO Advisor — YOUR HAND / RECOMMENDATION (Action / Size / Equity / Confidence) / ACTION FREQUENCIES (Raise 68% / Call 22% / Fold 10% bars) / SESSION (Hands 42 / Win Rate +8.3 BB). Press H to invoke GTO hint.' },

@@ -36,7 +36,7 @@ function Profile({ isVisible, isDarkBackground }) {
         }}
       >
         <img
-          src={`${import.meta.env.BASE_URL}images/profile.jpg`}
+          src={`${import.meta.env.BASE_URL}images/profile.webp`}
           alt="个人照片"
           style={{
             width: '100%',

@@ -1,7 +1,7 @@
 /**
  * Contact / Social
  *
- * 邮箱 / 电话 / 微信 — 通用商业联系信息
+ * 邮箱 / 电话 / 微信 / 简历下载 — 通用商业联系信息
  */
 export const contact = {
   name: 'Leon Zheng (郑灏文)',
@@ -13,5 +13,10 @@ export const contact = {
   wechat: 'Bgyyou99_',
   github: 'https://github.com/bgyyou',
   linkedin: 'https://linkedin.com/in/leon-zheng',
+  resume: {
+    url: '/resume/Zheng-Haowen-CV-AI-Marketing.pdf',
+    filename: '郑灏文 - AI 产品经理简历.pdf',
+    size: '82 KB',
+  },
   location: { zh: '目前在深圳', en: 'Currently in Shenzhen' },
 };

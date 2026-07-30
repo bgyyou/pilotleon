@@ -44,13 +44,33 @@ export const navigation = {
       hasSubmenu: true,
       submenu: [
         {
+          id: 'wda',
+          label: 'WDA',
+          detailPage: true
+        },
+        {
+          id: 'opc',
+          label: 'OPC',
+          detailPage: true
+        },
+        {
           id: 'mediapilot',
           label: 'MediaPilot',
           detailPage: true
         },
         {
-          id: 'insurancehub',
-          label: 'InsuranceHub',
+          id: 'lumora',
+          label: 'Lumora',
+          detailPage: true
+        },
+        {
+          id: 'jobhunter',
+          label: 'JobHunter',
+          detailPage: true
+        },
+        {
+          id: 'pokergto',
+          label: 'Poker GTO',
           detailPage: true
         }
       ]

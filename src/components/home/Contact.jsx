@@ -12,6 +12,7 @@ export default function Contact() {
     { id: 'phone-cn', label: t('contact.phone_cn'), value: contact.phone.cn, href: `tel:${contact.phone.cn.replace(/\s+/g, '')}`, icon: '☏' },
     { id: 'phone-hk', label: t('contact.phone_hk'), value: contact.phone.hk, href: `tel:${contact.phone.hk.replace(/\s+/g, '')}`, icon: '☏' },
     { id: 'wechat', label: t('contact.wechat'), value: contact.wechat, href: null, icon: '◐' },
+    { id: 'resume', label: isEn ? 'Download Resume' : '下载简历', value: isEn ? 'PDF · 82 KB' : `${contact.resume.size} · PDF`, href: contact.resume.url, icon: '↓', download: contact.resume.filename },
     { id: 'github', label: t('contact.github'), value: contact.github.replace('https://', ''), href: contact.github, icon: '◇' },
     { id: 'linkedin', label: t('contact.linkedin'), value: contact.linkedin.replace('https://', ''), href: contact.linkedin, icon: 'in' },
   ];
@@ -44,7 +45,13 @@ export default function Contact() {
                 transition={{ delay: 0.2 + i * 0.08, duration: 0.4 }}
               >
                 {c.href ? (
-                  <a href={c.href} className="contact__channel-link" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={c.href}
+                    className="contact__channel-link"
+                    target={c.download ? '_self' : '_blank'}
+                    rel={c.download ? undefined : 'noopener noreferrer'}
+                    download={c.download || undefined}
+                  >
                     <div className="contact__channel-icon">{c.icon}</div>
                     <div className="contact__channel-body">
                       <div className="contact__channel-label">{c.label}</div>

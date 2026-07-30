@@ -12,9 +12,7 @@ export default function Contact() {
     { id: 'phone-cn', label: t('contact.phone_cn'), value: contact.phone.cn, href: `tel:${contact.phone.cn.replace(/\s+/g, '')}`, icon: '☏' },
     { id: 'phone-hk', label: t('contact.phone_hk'), value: contact.phone.hk, href: `tel:${contact.phone.hk.replace(/\s+/g, '')}`, icon: '☏' },
     { id: 'wechat', label: t('contact.wechat'), value: contact.wechat, href: null, icon: '◐' },
-    { id: 'resume', label: isEn ? 'Download Resume' : '下载简历', value: `PDF · ${contact.resume.size}`, href: contact.resume.url, icon: '↓', download: contact.resume.filename },
     { id: 'github', label: t('contact.github'), value: contact.github.replace('https://', ''), href: contact.github, icon: '◇' },
-    { id: 'linkedin', label: t('contact.linkedin'), value: contact.linkedin.replace('https://', ''), href: contact.linkedin, icon: 'in' },
   ];
 
   return (

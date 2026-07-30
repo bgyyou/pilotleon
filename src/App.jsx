@@ -1,11 +1,13 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import TopNav from './components/layout/TopNav';
 import Footer from './components/layout/Footer';
 import SmoothScroll from './components/layout/SmoothScroll';
 import Home from './pages/Home';
-import Project from './pages/Project';
+
+// 项目详情页（6 个项目，数据量大）按需加载，不进首屏 bundle
+const Project = lazy(() => import('./pages/Project'));
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,7 +49,8 @@ export default function App() {
       <TopNav />
       <main>
         <AnimatePresence mode="wait" initial={false}>
-          <Routes location={location} key={location.pathname}>
+          <Suspense fallback={null}>
+            <Routes location={location} key={location.pathname}>
             <Route
               path="/"
               element={
@@ -72,7 +75,8 @@ export default function App() {
                 </PageTransition>
               }
             />
-          </Routes>
+            </Routes>
+          </Suspense>
         </AnimatePresence>
       </main>
       <Footer />

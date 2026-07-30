@@ -13,6 +13,11 @@
     <!-- 字体: 不用 Google Fonts / 国内镜像 (跨境太慢), 用 system font fallback -->
     <!-- globals.css font stack: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans SC', sans-serif -->
 
+    <!-- 首屏 Hero 背景图：JS 执行前就开始下载（手机走 828w 小图） -->
+    <link rel="preload" as="image" href="/hero/01-hongkong.webp"
+          imagesrcset="/hero/01-hongkong-m.webp 828w, /hero/01-hongkong.webp 1920w"
+          imagesizes="100vw" fetchpriority="high" />
+
     <title>Leon · AI Product Engineer</title>
   </head>
   <body>

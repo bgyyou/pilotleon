@@ -1,7 +1,9 @@
 .hero {
   position: relative;
   min-height: 100vh;
+  min-height: 100svh; /* iOS Safari: 100vh 含工具栏区域，svh 才是真实可视高 */
   max-height: 100vh;
+  max-height: 100svh;
   display: flex;
   align-items: center;
   padding-top: var(--nav-height);
@@ -35,9 +37,17 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  /* Slight scale to prevent edge flicker during fade */
-  transform: scale(1.06);
-  /* Slow ken-burns drift, gives life when image is active */
+  /* 未加载完成时保持透明，加载完再淡入（避免渐进渲染的断层感） */
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero__bg-image--loaded img {
+  opacity: 1;
+}
+
+/* ken-burns 只跑在当前激活的图上，隐藏的两张不白耗 GPU */
+.hero__bg-image--active img {
   animation: hero-kenburns 24s ease-in-out infinite alternate;
 }
 
@@ -482,6 +492,13 @@
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-3);
+  }
+  /* 移动端减负：关掉肉眼几乎不可感知的装饰动画，省电省 GPU */
+  .hero__orb {
+    animation: none;
+  }
+  .hero__noise {
+    display: none;
   }
   .hero__bg-dots {
     right: var(--space-3);

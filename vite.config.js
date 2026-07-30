@@ -10,6 +10,17 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: 'dist'
+    outDir: 'dist',
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (!id.includes('node_modules')) return;
+          if (/node_modules[\\/]react(-dom)?[\\/]/.test(id) || id.includes('scheduler')) return 'react-vendor';
+          if (id.includes('react-router')) return 'router';
+          if (id.includes('framer-motion') || id.includes('motion-dom') || id.includes('motion-utils')) return 'framer-motion';
+          if (id.includes('i18next')) return 'i18n-vendor';
+        }
+      }
+    }
   }
 });

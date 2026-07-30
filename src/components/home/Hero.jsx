@@ -18,9 +18,9 @@ const SLOGANS_EN = [
 ];
 
 const HERO_IMAGES = [
-  { src: '/hero/01-hongkong.webp', label: 'Hong Kong' },
-  { src: '/hero/02-shenzhen.webp', label: 'Shenzhen' },
-  { src: '/hero/03-ai-brain.webp', label: 'AI' },
+  { src: '/hero/01-hongkong.webp', srcM: '/hero/01-hongkong-m.webp', label: 'Hong Kong' },
+  { src: '/hero/02-shenzhen.webp', srcM: '/hero/02-shenzhen-m.webp', label: 'Shenzhen' },
+  { src: '/hero/03-ai-brain.webp', srcM: '/hero/03-ai-brain-m.webp', label: 'AI' },
 ];
 
 const PHRASES_ZH = [
@@ -107,6 +107,8 @@ export default function Hero() {
 
   // ===== Background image carousel =====
   const [bgIdx, setBgIdx] = useState(0);
+  // 每张图加载完成后才淡入，避免慢网下图“长出来”的断层感
+  const [loadedImgs, setLoadedImgs] = useState({});
   useEffect(() => {
     const id = setInterval(
       () => setBgIdx((i) => (i + 1) % HERO_IMAGES.length),
@@ -135,12 +137,19 @@ export default function Hero() {
         {HERO_IMAGES.map((img, i) => (
           <div
             key={img.src}
-            className={`hero__bg-image${i === bgIdx ? ' hero__bg-image--active' : ''}`}
+            className={`hero__bg-image${i === bgIdx ? ' hero__bg-image--active' : ''}${loadedImgs[img.src] ? ' hero__bg-image--loaded' : ''}`}
           >
             <img
               src={img.src}
+              srcSet={`${img.srcM} 828w, ${img.src} 1920w`}
+              sizes="100vw"
               alt=""
-              loading={i === 0 ? 'eager' : 'lazy'}
+              loading="eager"
+              fetchpriority={i === 0 ? 'high' : 'low'}
+              decoding="async"
+              onLoad={() =>
+                setLoadedImgs((s) => (s[img.src] ? s : { ...s, [img.src]: true }))
+              }
               draggable="false"
             />
           </div>

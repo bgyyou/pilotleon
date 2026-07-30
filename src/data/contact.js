@@ -14,9 +14,9 @@ export const contact = {
   github: 'https://github.com/bgyyou',
   linkedin: 'https://linkedin.com/in/leon-zheng',
   resume: {
-    url: '/resume/Zheng-Haowen-CV-AI-Marketing.pdf',
+    url: '/resume/Zheng-Haowen-CV-AI-PM.pdf',
     filename: '郑浩文 - AI 产品经理简历.pdf',
-    size: '82 KB',
+    size: '244 KB',
   },
   location: { zh: '目前在深圳', en: 'Currently in Shenzhen' },
 };

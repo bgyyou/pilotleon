@@ -30,25 +30,31 @@ npm run preview    # 预览 dist
 
 ## 部署
 
-### 腾讯 EdgeOne Pages
+线上站点 <https://pilotleon.online> 由**自建 nginx** 提供服务，纯静态托管，没有 CI —— `git push` 只是备份代码，**不会触发上线**。
 
-控制台：<https://console.tencentcloud.com/edgeone/makers/new?repo=pilotleon&namespace=bgyyou&from=within>
+```bash
+npm run deploy     # build + 上传 + 同步，一步到位
+```
 
-构建配置：
+`scripts/deploy.sh` 做的事：本地 `vite build` → `tar` 流式传到服务器暂存目录 → 服务器端 `rsync -a --delete` 同步进站点根目录 → `curl` 校验入口状态码。
 
 | 项 | 值 |
 |---|---|
-| Framework | Vite |
-| Build command | `npm run build` |
-| Output directory | `dist` |
-| Node version | 20+ |
-| Install command | `npm install` |
+| 服务器 | `ubuntu@124.156.140.217`（免密 ssh，可用 `DEPLOY_HOST` 覆盖）|
+| 站点根目录 | `/var/www/pilotleon`（`ubuntu:ubuntu`，无需 sudo）|
+| 暂存目录 | `/home/ubuntu/pilotleon-dist` |
+| nginx 配置 | `scripts/nginx-pilotleon.conf`（`/etc/nginx/sites-available/`）|
 
-> 仓库已配置 `base: '/'`（`vite.config.js`），无需特殊 base path 调整。
+注意事项：
+
+- **构建必须在本地做** —— 服务器上没有装 Node。
+- `--delete` 会清掉上一版带 hash 的旧产物，站点根目录下不要手工放额外文件。
+- `index.html` 设了 `Cache-Control: no-cache`，`/assets/` 长缓存 + 内容 hash，所以发版即时生效，不需要清缓存。
+- HTTPS 证书由 Certbot 自动续期，部署流程不涉及。
 
 ### 域名
 
-EdgeOne Pages 提供免费子域名 `pilotleon.edgeone.app`；如需自定义域名（如 `pilotleon.com`），在控制台 → 域名管理 添加 CNAME 解析到 EdgeOne 分配的接入域名即可。
+`pilotleon.online` / `www.pilotleon.online` A 记录指向 `124.156.140.217`，nginx 侧统一 301 到 https。
 
 ## 目录结构
 
